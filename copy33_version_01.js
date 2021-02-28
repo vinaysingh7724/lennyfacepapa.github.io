@@ -1,1 +1,76 @@
-var _0x2f90=['topbtn','contentEditable','readOnly','getElementById','moveToElementText','30197TjVPSx','INPUT','text','9324CoYqNH','style','2389eRZVZM','body','9wFqfgv','removeAllRanges','selectNodeContents','Copied!','remove','474181jAutbU','Press\x20CTRL+C\x20to\x20copy','match','append','894CNumpS','select','userAgent','nodeName','createRange','createTextRange','display','getSelection','\x22\x20/><span\x20class=\x22copybtn\x22>👍\x20Copied!</span></p>','addRange','scrollTop','465286GOPqvB','execCommand','.copied','339789zQuyxO','setSelectionRange','13GXKPZZ','documentElement','queryCommandSupported','onscroll','127DaqUMN'];var _0x313a=function(_0x489171,_0xafa79){_0x489171=_0x489171-0x1aa;var _0x2f9045=_0x2f90[_0x489171];return _0x2f9045;};var _0x3f8f9d=_0x313a;(function(_0x17e21b,_0x54fdea){var _0x179cc5=_0x313a;while(!![]){try{var _0x3cb30e=parseInt(_0x179cc5(0x1c7))*-parseInt(_0x179cc5(0x1bd))+parseInt(_0x179cc5(0x1bb))+parseInt(_0x179cc5(0x1ca))+parseInt(_0x179cc5(0x1d3))+-parseInt(_0x179cc5(0x1c1))*-parseInt(_0x179cc5(0x1cc))+-parseInt(_0x179cc5(0x1ce))*parseInt(_0x179cc5(0x1ad))+-parseInt(_0x179cc5(0x1b8));if(_0x3cb30e===_0x54fdea)break;else _0x17e21b['push'](_0x17e21b['shift']());}catch(_0x249b0f){_0x17e21b['push'](_0x17e21b['shift']());}}}(_0x2f90,0x3fac4));function copythislennyface(_0x481010){var _0xf52cd3=_0x313a;if(document[_0xf52cd3(0x1cd)][_0xf52cd3(0x1b2)]){var _0x2b8a5f=document['body']['createTextRange']();_0x2b8a5f[_0xf52cd3(0x1c6)](_0x481010),_0x2b8a5f[_0xf52cd3(0x1ae)](),_0x2b8a5f[_0xf52cd3(0x1b9)]('Copy'),tooltip(_0x481010,_0xf52cd3(0x1d1));}else{if(window[_0xf52cd3(0x1b4)]&&document[_0xf52cd3(0x1b1)]){var _0x3a1eb9=_0x481010[_0xf52cd3(0x1c3)],_0x5d3efe=_0x481010[_0xf52cd3(0x1c4)];_0x481010[_0xf52cd3(0x1c3)]=!![],_0x481010['readOnly']=![];var _0x2c5c24=document['createRange']();_0x2c5c24[_0xf52cd3(0x1d0)](_0x481010);var _0x3ce4a8=window['getSelection']();_0x3ce4a8[_0xf52cd3(0x1cf)](),_0x3ce4a8[_0xf52cd3(0x1b6)](_0x2c5c24);(_0x481010[_0xf52cd3(0x1b0)]=='TEXTAREA'||_0x481010['nodeName']==_0xf52cd3(0x1c8))&&_0x481010['select']();_0x481010[_0xf52cd3(0x1bc)]&&navigator[_0xf52cd3(0x1af)][_0xf52cd3(0x1ab)](/ipad|ipod|iphone/i)&&_0x481010['setSelectionRange'](0x0,0xf423f);_0x481010[_0xf52cd3(0x1c3)]=_0x3a1eb9,_0x481010['readOnly']=_0x5d3efe;if(document[_0xf52cd3(0x1bf)]('copy')){var _0x30290b=document[_0xf52cd3(0x1b9)]('copy');_0x30290b?($(_0xf52cd3(0x1cd))[_0xf52cd3(0x1ac)]('<p\x20class=\x22copied\x22><input\x20class\x20=\x20\x22text\x22\x20\x20value=\x22'+$(_0x481010)[_0xf52cd3(0x1c9)]()+_0xf52cd3(0x1b5)),setTimeout(function(){var _0x5d247d=_0xf52cd3;$(_0x5d247d(0x1ba))[_0x5d247d(0x1d2)]();},0x3e8)):tooltip(_0x481010,_0xf52cd3(0x1aa));}else!navigator[_0xf52cd3(0x1af)][_0xf52cd3(0x1ab)](/ipad|ipod|iphone|android|silk/i)&&tooltip(_0x481010,'Press\x20CTRL+C\x20to\x20copy');}}}var mybutton=document[_0x3f8f9d(0x1c5)](_0x3f8f9d(0x1c2));window[_0x3f8f9d(0x1c0)]=function(){scrollFunction();};function scrollFunction(){var _0x141b21=_0x3f8f9d;document[_0x141b21(0x1cd)][_0x141b21(0x1b7)]>0x14||document[_0x141b21(0x1be)][_0x141b21(0x1b7)]>0x14?mybutton[_0x141b21(0x1cb)][_0x141b21(0x1b3)]='block':mybutton[_0x141b21(0x1cb)]['display']='none';}function topFunction(){var _0x1cbfeb=_0x3f8f9d;document[_0x1cbfeb(0x1cd)][_0x1cbfeb(0x1b7)]=0x0,document[_0x1cbfeb(0x1be)][_0x1cbfeb(0x1b7)]=0x0;};
+
+function copythislennyface(el)
+{
+
+    if (document.body.createTextRange) {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.select();
+        textRange.execCommand("Copy");  
+        tooltip(el, "Copied!"); 
+    }
+    else if (window.getSelection && document.createRange) {
+        var editable = el.contentEditable; 
+        var readOnly = el.readOnly; 
+        el.contentEditable = true; 
+        el.readOnly = false; 
+        var range = document.createRange();
+        range.selectNodeContents(el);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        if (el.nodeName == "TEXTAREA" || el.nodeName == "INPUT")
+            el.select(); 
+        if (el.setSelectionRange && navigator.userAgent.match(/ipad|ipod|iphone/i))
+            el.setSelectionRange(0, 999999); 
+        el.contentEditable = false; 
+        el.readOnly = false; 
+        if (document.queryCommandSupported("copy"))
+        {
+            var successful = document.execCommand('copy'); 
+            if (successful) $('body').append('<p class="copied"><input class = "text"  value="' + $(el).text() + '" /><span class="copybtn">👍 Copied!</span></p>'), setTimeout(function () {
+            $('.copied')['remove']();
+            }, 1000);
+            else tooltip(el, "Press CTRL+C to copy");
+        }
+        else
+        {
+            if (!navigator.userAgent.match(/ipad|ipod|iphone|android|silk/i))
+                tooltip(el, "Press CTRL+C to copy");   
+        }
+    }
+} 
+
+
+
+
+
+//Get the button
+var mybutton = document.getElementById("topbtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+
+
+
+
+
+
+
+  
+  
+
+
+
+ 
