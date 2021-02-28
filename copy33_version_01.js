@@ -12,8 +12,8 @@ function copythislennyface(el)
     else if (window.getSelection && document.createRange) {
         var editable = el.contentEditable; 
         var readOnly = el.readOnly; 
-        el.contentEditable = true; 
-        el.readOnly = false; 
+        el.contentEditable = false; 
+        el.readOnly = true; 
         var range = document.createRange();
         range.selectNodeContents(el);
         var sel = window.getSelection();
@@ -21,7 +21,7 @@ function copythislennyface(el)
         sel.addRange(range);
         if (el.nodeName == "TEXTAREA" || el.nodeName == "INPUT")
             el.select(); 
-        if (el.setSelectionRange)
+        if (el.setSelectionRange && navigator.userAgent.match(/ipad|ipod|iphone/i))
             el.setSelectionRange(0, 999999); 
         el.contentEditable = editable; 
         el.readOnly = readOnly; 
