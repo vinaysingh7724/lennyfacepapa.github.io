@@ -245,6 +245,9 @@ background: #fff;
 color: #3e0507;
 cursor: pointer;
 border: 1px solid #ecf3f9;
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
 }
 .lenny-face:hover {
 color: #fff;
