@@ -21,10 +21,6 @@ function copythislennyface(el)
         sel.addRange(range);
         if (el.nodeName == "TEXTAREA" || el.nodeName == "INPUT")
             el.select(); 
-        if (el.setSelectionRange && navigator.userAgent.match(/ipad|ipod|iphone/i))
-            el.setSelectionRange(0, 999999); 
-        el.contentEditable = false; 
-        el.readOnly = false; 
         if (document.queryCommandSupported("copy"))
         {
             var successful = document.execCommand('copy'); 
