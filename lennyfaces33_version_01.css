@@ -245,10 +245,6 @@ background: #fff;
 color: #3e0507;
 cursor: pointer;
 border: 1px solid #ecf3f9;
--webkit-user-select: none;  /* Chrome all / Safari all */
--moz-user-select: none;     /* Firefox all */
--ms-user-select: none;      /* IE 10+ */
-user-select: none;          /* Likely future */  
 }
 .lenny-face:hover {
 color: #fff;
@@ -257,9 +253,11 @@ border: 1px solid #f12c34;
 }
 ::selection {
 background: none;
+color: none;
 }
 ::-moz-selection {
 background: none;
+color: none;
 }
 .copied {
 position: fixed;
