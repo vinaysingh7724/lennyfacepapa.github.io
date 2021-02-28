@@ -257,12 +257,6 @@ color: #fff;
 background: #f12c34;
 border: 1px solid #f12c34;
 }
-::selection {
-background: none;
-}
-::-moz-selection {
-background: none;
-}
 .copied {
 position: fixed;
 max-width: 200px;
