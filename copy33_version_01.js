@@ -23,7 +23,7 @@ function copythislennyface(el)
             el.select(); 
         if (el.setSelectionRange && navigator.userAgent.match(/ipad|ipod|iphone/i))
             el.setSelectionRange(0, 999999); 
-        el.contentEditable = editable; 
+        el.contentEditable = false; 
         el.readOnly = readOnly; 
         if (document.queryCommandSupported("copy"))
         {
