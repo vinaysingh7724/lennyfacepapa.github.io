@@ -230,7 +230,7 @@ transition: 0.5s;
 background: #060505;
 color: #fff;
 }
-.alllennyfaceslist .lenny-face {
+.lenny-face {
 display: inline-block;
 -webkit-border-radius: 6px;
 -moz-border-radius: 6px;
@@ -245,10 +245,12 @@ background: #fff;
 color: #3e0507;
 cursor: pointer;
 border: 1px solid #ecf3f9;
--webkit-touch-callout: none;
--webkit-tap-highlight-color: transparent;
+-webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */  
 }
-.alllennyfaceslist .lenny-face:hover {
+.lenny-face:hover {
 color: #fff;
 background: #f12c34;
 border: 1px solid #f12c34;
@@ -508,7 +510,7 @@ font-size: 20px;
 #lastcopiedfaces .lenny-face {
 font-size: 13px!important;
 }
-.alllennyfaceslist .lenny-face {
+.lenny-face {
 font-size: 17px;
 }
 #topbtn {
