@@ -245,17 +245,20 @@ background: #fff;
 color: #3e0507;
 cursor: pointer;
 border: 1px solid #ecf3f9;
--webkit-touch-callout: none; /* iOS Safari */
 -webkit-user-select: none; /* Safari */
--khtml-user-select: none; /* Konqueror HTML */
--moz-user-select: none; /* Old versions of Firefox */
--ms-user-select: none; /* Internet Explorer/Edge */
-user-select: none; /* Non-prefixed version, currently
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
 }
 .lenny-face:hover {
 color: #fff;
 background: #f12c34;
 border: 1px solid #f12c34;
+}
+::selection {
+background: none;
+}
+::-moz-selection {
+background: none;
 }
 .copied {
 position: fixed;
